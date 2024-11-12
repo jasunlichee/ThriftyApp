@@ -7,13 +7,57 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		081677FA2CA380EB00C158E1 /* ThriftyUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081677F92CA380EB00C158E1 /* ThriftyUser.swift */; };
+		08328BC22CCC728700676945 /* ProfileVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08328BC12CCC728700676945 /* ProfileVM.swift */; };
+		085684932C9B6713006209D1 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 085684922C9B6713006209D1 /* GoogleSignIn */; };
+		085684952C9B6713006209D1 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 085684942C9B6713006209D1 /* GoogleSignInSwift */; };
+		0856849B2C9BCF22006209D1 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 0856849A2C9BCF22006209D1 /* FirebaseAnalytics */; };
+		0856849D2C9BCF22006209D1 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 0856849C2C9BCF22006209D1 /* FirebaseStorage */; };
+		085684A32C9BDDAD006209D1 /* GoogleVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085684A22C9BDDAD006209D1 /* GoogleVM.swift */; };
+		085684A62C9BDEB1006209D1 /* ApplicationUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085684A52C9BDEB1006209D1 /* ApplicationUtility.swift */; };
+		085684A82C9BE010006209D1 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 085684A72C9BE010006209D1 /* FirebaseAuth */; };
+		085684AA2C9BE07E006209D1 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085684A92C9BE07E006209D1 /* LoginView.swift */; };
+		085684AC2C9CA68A006209D1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 085684AB2C9CA68A006209D1 /* GoogleService-Info.plist */; };
+		085684AE2C9CA68F006209D1 /* client.plist in Resources */ = {isa = PBXBuildFile; fileRef = 085684AD2C9CA68F006209D1 /* client.plist */; };
+		085684B02C9E8684006209D1 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085684AF2C9E8684006209D1 /* AuthManager.swift */; };
+		085684B22C9E918C006209D1 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085684B12C9E918C006209D1 /* SignUpView.swift */; };
 		086762AE2C8FBF78007D5074 /* ThriftyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086762AD2C8FBF78007D5074 /* ThriftyApp.swift */; };
-		086762B02C8FBF78007D5074 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086762AF2C8FBF78007D5074 /* ContentView.swift */; };
 		086762B22C8FBF7A007D5074 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 086762B12C8FBF7A007D5074 /* Assets.xcassets */; };
 		086762B52C8FBF7A007D5074 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 086762B42C8FBF7A007D5074 /* Preview Assets.xcassets */; };
 		086762BF2C8FBF7A007D5074 /* ThriftyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086762BE2C8FBF7A007D5074 /* ThriftyTests.swift */; };
 		086762C92C8FBF7A007D5074 /* ThriftyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086762C82C8FBF7A007D5074 /* ThriftyUITests.swift */; };
 		086762CB2C8FBF7A007D5074 /* ThriftyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086762CA2C8FBF7A007D5074 /* ThriftyUITestsLaunchTests.swift */; };
+		086762D82C8FBFD0007D5074 /* MonthlyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086762D72C8FBFD0007D5074 /* MonthlyView.swift */; };
+		086762DE2C8FC1BF007D5074 /* Purchase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086762DD2C8FC1BF007D5074 /* Purchase.swift */; };
+		086762E02C8FC314007D5074 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086762DF2C8FC314007D5074 /* Theme.swift */; };
+		086762E42C8FC3EF007D5074 /* Month.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086762E32C8FC3EF007D5074 /* Month.swift */; };
+		086762E62C8FCF2F007D5074 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086762E52C8FCF2F007D5074 /* DetailView.swift */; };
+		086762E82C8FCF4C007D5074 /* NewPurchaseSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086762E72C8FCF4C007D5074 /* NewPurchaseSheet.swift */; };
+		086762EA2C8FD0A6007D5074 /* PurchaseCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086762E92C8FD0A6007D5074 /* PurchaseCard.swift */; };
+		086762EC2C8FED42007D5074 /* RingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086762EB2C8FED42007D5074 /* RingView.swift */; };
+		086762EE2C8FF4E9007D5074 /* PurchaseEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086762ED2C8FF4E9007D5074 /* PurchaseEditView.swift */; };
+		086762F02C900047007D5074 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086762EF2C900047007D5074 /* CategoryView.swift */; };
+		086762F22C9036F3007D5074 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086762F12C9036F3007D5074 /* ProgressBar.swift */; };
+		086762F82C903B47007D5074 /* MonthlyHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086762F72C903B47007D5074 /* MonthlyHeaderView.swift */; };
+		086762FA2C903F45007D5074 /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086762F92C903F45007D5074 /* SummaryView.swift */; };
+		086762FC2C90E585007D5074 /* PurchaseEditSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086762FB2C90E585007D5074 /* PurchaseEditSheet.swift */; };
+		086763082C93F006007D5074 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086763072C93F006007D5074 /* HistoryView.swift */; };
+		0867630A2C93F0D8007D5074 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086763092C93F0D8007D5074 /* ProfileView.swift */; };
+		086763152C941C00007D5074 /* MonthCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086763142C941C00007D5074 /* MonthCard.swift */; };
+		086763172C942BFA007D5074 /* HistoryPurchaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086763162C942BFA007D5074 /* HistoryPurchaseView.swift */; };
+		086763192C950A70007D5074 /* PurchaseArc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086763182C950A70007D5074 /* PurchaseArc.swift */; };
+		087678312C9EA370004E219D /* AppleVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087678302C9EA370004E219D /* AppleVM.swift */; };
+		087678352C9F628A004E219D /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087678342C9F6289004E219D /* FirebaseService.swift */; };
+		087678382C9F6CF3004E219D /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 087678372C9F6CF3004E219D /* FirebaseFirestore */; };
+		08925F0F2CD9A1ED00874445 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08925F0E2CD9A1ED00874445 /* LoadingView.swift */; };
+		08925F152CDC28AA00874445 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08925F142CDC28AA00874445 /* TestView.swift */; };
+		08925F172CDC2DA100874445 /* SettingsCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08925F162CDC2DA100874445 /* SettingsCard.swift */; };
+		08925F1A2CDC5FDF00874445 /* ProfileSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08925F192CDC5FDF00874445 /* ProfileSetting.swift */; };
+		08925F1C2CDC7E4100874445 /* CycleSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08925F1B2CDC7E4100874445 /* CycleSetting.swift */; };
+		08925F202CDCBB0800874445 /* BudgetSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08925F1F2CDCBB0800874445 /* BudgetSetting.swift */; };
+		08925F222CDD748500874445 /* BudgetCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08925F212CDD748500874445 /* BudgetCard.swift */; };
+		08925F262CDEA91200874445 /* ObservableMonth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08925F252CDEA91200874445 /* ObservableMonth.swift */; };
+		08C13CB52CD2BB3C00663FCD /* SignInVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C13CB42CD2BB3C00663FCD /* SignInVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +78,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		081677F92CA380EB00C158E1 /* ThriftyUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThriftyUser.swift; sourceTree = "<group>"; };
+		08328BC12CCC728700676945 /* ProfileVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVM.swift; sourceTree = "<group>"; };
+		085684A22C9BDDAD006209D1 /* GoogleVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleVM.swift; sourceTree = "<group>"; };
+		085684A52C9BDEB1006209D1 /* ApplicationUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationUtility.swift; sourceTree = "<group>"; };
+		085684A92C9BE07E006209D1 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		085684AB2C9CA68A006209D1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		085684AD2C9CA68F006209D1 /* client.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = client.plist; sourceTree = "<group>"; };
+		085684AF2C9E8684006209D1 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		085684B12C9E918C006209D1 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		086762AA2C8FBF78007D5074 /* Thrifty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Thrifty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		086762AD2C8FBF78007D5074 /* ThriftyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThriftyApp.swift; sourceTree = "<group>"; };
-		086762AF2C8FBF78007D5074 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		086762B12C8FBF7A007D5074 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		086762B42C8FBF7A007D5074 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		086762BA2C8FBF7A007D5074 /* ThriftyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThriftyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +96,37 @@
 		086762C42C8FBF7A007D5074 /* ThriftyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThriftyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		086762C82C8FBF7A007D5074 /* ThriftyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThriftyUITests.swift; sourceTree = "<group>"; };
 		086762CA2C8FBF7A007D5074 /* ThriftyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThriftyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		086762D72C8FBFD0007D5074 /* MonthlyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyView.swift; sourceTree = "<group>"; };
+		086762DD2C8FC1BF007D5074 /* Purchase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Purchase.swift; sourceTree = "<group>"; };
+		086762DF2C8FC314007D5074 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		086762E32C8FC3EF007D5074 /* Month.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Month.swift; sourceTree = "<group>"; };
+		086762E52C8FCF2F007D5074 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		086762E72C8FCF4C007D5074 /* NewPurchaseSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPurchaseSheet.swift; sourceTree = "<group>"; };
+		086762E92C8FD0A6007D5074 /* PurchaseCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseCard.swift; sourceTree = "<group>"; };
+		086762EB2C8FED42007D5074 /* RingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingView.swift; sourceTree = "<group>"; };
+		086762ED2C8FF4E9007D5074 /* PurchaseEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseEditView.swift; sourceTree = "<group>"; };
+		086762EF2C900047007D5074 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
+		086762F12C9036F3007D5074 /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
+		086762F72C903B47007D5074 /* MonthlyHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyHeaderView.swift; sourceTree = "<group>"; };
+		086762F92C903F45007D5074 /* SummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
+		086762FB2C90E585007D5074 /* PurchaseEditSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseEditSheet.swift; sourceTree = "<group>"; };
+		086763072C93F006007D5074 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		086763092C93F0D8007D5074 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		086763142C941C00007D5074 /* MonthCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthCard.swift; sourceTree = "<group>"; };
+		086763162C942BFA007D5074 /* HistoryPurchaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPurchaseView.swift; sourceTree = "<group>"; };
+		086763182C950A70007D5074 /* PurchaseArc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseArc.swift; sourceTree = "<group>"; };
+		0876782F2C9E9E5C004E219D /* Thrifty.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Thrifty.entitlements; sourceTree = "<group>"; };
+		087678302C9EA370004E219D /* AppleVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleVM.swift; sourceTree = "<group>"; };
+		087678342C9F6289004E219D /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
+		08925F0E2CD9A1ED00874445 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		08925F142CDC28AA00874445 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		08925F162CDC2DA100874445 /* SettingsCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCard.swift; sourceTree = "<group>"; };
+		08925F192CDC5FDF00874445 /* ProfileSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSetting.swift; sourceTree = "<group>"; };
+		08925F1B2CDC7E4100874445 /* CycleSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CycleSetting.swift; sourceTree = "<group>"; };
+		08925F1F2CDCBB0800874445 /* BudgetSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetSetting.swift; sourceTree = "<group>"; };
+		08925F212CDD748500874445 /* BudgetCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetCard.swift; sourceTree = "<group>"; };
+		08925F252CDEA91200874445 /* ObservableMonth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableMonth.swift; sourceTree = "<group>"; };
+		08C13CB42CD2BB3C00663FCD /* SignInVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +134,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				085684932C9B6713006209D1 /* GoogleSignIn in Frameworks */,
+				085684A82C9BE010006209D1 /* FirebaseAuth in Frameworks */,
+				0856849D2C9BCF22006209D1 /* FirebaseStorage in Frameworks */,
+				085684952C9B6713006209D1 /* GoogleSignInSwift in Frameworks */,
+				0856849B2C9BCF22006209D1 /* FirebaseAnalytics in Frameworks */,
+				087678382C9F6CF3004E219D /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +160,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		085684A42C9BDE9C006209D1 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				085684A52C9BDEB1006209D1 /* ApplicationUtility.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		086762A12C8FBF78007D5074 = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +175,7 @@
 				086762BD2C8FBF7A007D5074 /* ThriftyTests */,
 				086762C72C8FBF7A007D5074 /* ThriftyUITests */,
 				086762AB2C8FBF78007D5074 /* Products */,
+				087678362C9F6CF3004E219D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,8 +192,14 @@
 		086762AC2C8FBF78007D5074 /* Thrifty */ = {
 			isa = PBXGroup;
 			children = (
+				0876782F2C9E9E5C004E219D /* Thrifty.entitlements */,
+				085684A42C9BDE9C006209D1 /* Components */,
 				086762AD2C8FBF78007D5074 /* ThriftyApp.swift */,
-				086762AF2C8FBF78007D5074 /* ContentView.swift */,
+				085684AD2C9CA68F006209D1 /* client.plist */,
+				085684AB2C9CA68A006209D1 /* GoogleService-Info.plist */,
+				086762D92C8FC190007D5074 /* Models */,
+				086762DA2C8FC19B007D5074 /* Views */,
+				08925F182CDC5F7300874445 /* Settings */,
 				086762B12C8FBF7A007D5074 /* Assets.xcassets */,
 				086762B32C8FBF7A007D5074 /* Preview Content */,
 			);
@@ -127,6 +231,70 @@
 			path = ThriftyUITests;
 			sourceTree = "<group>";
 		};
+		086762D92C8FC190007D5074 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				081677F92CA380EB00C158E1 /* ThriftyUser.swift */,
+				086762E32C8FC3EF007D5074 /* Month.swift */,
+				086762DD2C8FC1BF007D5074 /* Purchase.swift */,
+				086762DF2C8FC314007D5074 /* Theme.swift */,
+				087678302C9EA370004E219D /* AppleVM.swift */,
+				085684A22C9BDDAD006209D1 /* GoogleVM.swift */,
+				085684AF2C9E8684006209D1 /* AuthManager.swift */,
+				087678342C9F6289004E219D /* FirebaseService.swift */,
+				08328BC12CCC728700676945 /* ProfileVM.swift */,
+				08C13CB42CD2BB3C00663FCD /* SignInVM.swift */,
+				08925F252CDEA91200874445 /* ObservableMonth.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		086762DA2C8FC19B007D5074 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				085684A92C9BE07E006209D1 /* LoginView.swift */,
+				086762D72C8FBFD0007D5074 /* MonthlyView.swift */,
+				085684B12C9E918C006209D1 /* SignUpView.swift */,
+				086763072C93F006007D5074 /* HistoryView.swift */,
+				08925F0E2CD9A1ED00874445 /* LoadingView.swift */,
+				086763092C93F0D8007D5074 /* ProfileView.swift */,
+				086762E52C8FCF2F007D5074 /* DetailView.swift */,
+				086762F72C903B47007D5074 /* MonthlyHeaderView.swift */,
+				086763182C950A70007D5074 /* PurchaseArc.swift */,
+				086762EB2C8FED42007D5074 /* RingView.swift */,
+				086762F92C903F45007D5074 /* SummaryView.swift */,
+				086762E72C8FCF4C007D5074 /* NewPurchaseSheet.swift */,
+				086762FB2C90E585007D5074 /* PurchaseEditSheet.swift */,
+				086762ED2C8FF4E9007D5074 /* PurchaseEditView.swift */,
+				086762EF2C900047007D5074 /* CategoryView.swift */,
+				086762F12C9036F3007D5074 /* ProgressBar.swift */,
+				086763162C942BFA007D5074 /* HistoryPurchaseView.swift */,
+				08925F142CDC28AA00874445 /* TestView.swift */,
+				086762E92C8FD0A6007D5074 /* PurchaseCard.swift */,
+				086763142C941C00007D5074 /* MonthCard.swift */,
+				08925F162CDC2DA100874445 /* SettingsCard.swift */,
+				08925F212CDD748500874445 /* BudgetCard.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		087678362C9F6CF3004E219D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		08925F182CDC5F7300874445 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				08925F192CDC5FDF00874445 /* ProfileSetting.swift */,
+				08925F1B2CDC7E4100874445 /* CycleSetting.swift */,
+				08925F1F2CDCBB0800874445 /* BudgetSetting.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +311,14 @@
 			dependencies = (
 			);
 			name = Thrifty;
+			packageProductDependencies = (
+				085684922C9B6713006209D1 /* GoogleSignIn */,
+				085684942C9B6713006209D1 /* GoogleSignInSwift */,
+				0856849A2C9BCF22006209D1 /* FirebaseAnalytics */,
+				0856849C2C9BCF22006209D1 /* FirebaseStorage */,
+				085684A72C9BE010006209D1 /* FirebaseAuth */,
+				087678372C9F6CF3004E219D /* FirebaseFirestore */,
+			);
 			productName = Thrifty;
 			productReference = 086762AA2C8FBF78007D5074 /* Thrifty.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +391,10 @@
 				Base,
 			);
 			mainGroup = 086762A12C8FBF78007D5074;
+			packageReferences = (
+				085684912C9B6713006209D1 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+				085684992C9BCF22006209D1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 086762AB2C8FBF78007D5074 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -232,7 +412,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				086762B52C8FBF7A007D5074 /* Preview Assets.xcassets in Resources */,
+				085684AE2C9CA68F006209D1 /* client.plist in Resources */,
 				086762B22C8FBF7A007D5074 /* Assets.xcassets in Resources */,
+				085684AC2C9CA68A006209D1 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,8 +439,44 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				086762B02C8FBF78007D5074 /* ContentView.swift in Sources */,
+				086762EE2C8FF4E9007D5074 /* PurchaseEditView.swift in Sources */,
+				086762FA2C903F45007D5074 /* SummaryView.swift in Sources */,
+				086762D82C8FBFD0007D5074 /* MonthlyView.swift in Sources */,
+				086762E62C8FCF2F007D5074 /* DetailView.swift in Sources */,
+				08925F0F2CD9A1ED00874445 /* LoadingView.swift in Sources */,
+				08925F172CDC2DA100874445 /* SettingsCard.swift in Sources */,
+				086762EA2C8FD0A6007D5074 /* PurchaseCard.swift in Sources */,
+				08925F262CDEA91200874445 /* ObservableMonth.swift in Sources */,
+				08925F202CDCBB0800874445 /* BudgetSetting.swift in Sources */,
+				085684AA2C9BE07E006209D1 /* LoginView.swift in Sources */,
+				081677FA2CA380EB00C158E1 /* ThriftyUser.swift in Sources */,
+				086763152C941C00007D5074 /* MonthCard.swift in Sources */,
+				085684B22C9E918C006209D1 /* SignUpView.swift in Sources */,
+				08328BC22CCC728700676945 /* ProfileVM.swift in Sources */,
+				086762EC2C8FED42007D5074 /* RingView.swift in Sources */,
+				086762FC2C90E585007D5074 /* PurchaseEditSheet.swift in Sources */,
+				086762F02C900047007D5074 /* CategoryView.swift in Sources */,
+				086762E02C8FC314007D5074 /* Theme.swift in Sources */,
+				087678352C9F628A004E219D /* FirebaseService.swift in Sources */,
+				0867630A2C93F0D8007D5074 /* ProfileView.swift in Sources */,
+				08925F1C2CDC7E4100874445 /* CycleSetting.swift in Sources */,
+				086763172C942BFA007D5074 /* HistoryPurchaseView.swift in Sources */,
+				086763082C93F006007D5074 /* HistoryView.swift in Sources */,
 				086762AE2C8FBF78007D5074 /* ThriftyApp.swift in Sources */,
+				08925F1A2CDC5FDF00874445 /* ProfileSetting.swift in Sources */,
+				086762E42C8FC3EF007D5074 /* Month.swift in Sources */,
+				085684A62C9BDEB1006209D1 /* ApplicationUtility.swift in Sources */,
+				086763192C950A70007D5074 /* PurchaseArc.swift in Sources */,
+				08925F152CDC28AA00874445 /* TestView.swift in Sources */,
+				086762E82C8FCF4C007D5074 /* NewPurchaseSheet.swift in Sources */,
+				08C13CB52CD2BB3C00663FCD /* SignInVM.swift in Sources */,
+				086762F22C9036F3007D5074 /* ProgressBar.swift in Sources */,
+				086762F82C903B47007D5074 /* MonthlyHeaderView.swift in Sources */,
+				086762DE2C8FC1BF007D5074 /* Purchase.swift in Sources */,
+				085684A32C9BDDAD006209D1 /* GoogleVM.swift in Sources */,
+				085684B02C9E8684006209D1 /* AuthManager.swift in Sources */,
+				087678312C9EA370004E219D /* AppleVM.swift in Sources */,
+				08925F222CDD748500874445 /* BudgetCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,7 +565,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -404,7 +622,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -419,12 +637,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_ENTITLEMENTS = Thrifty/Thrifty.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Thrifty/Preview Content\"";
 				DEVELOPMENT_TEAM = P3SP5SY954;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Thrifty/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Thrifty;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -448,12 +671,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_ENTITLEMENTS = Thrifty/Thrifty.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Thrifty/Preview Content\"";
 				DEVELOPMENT_TEAM = P3SP5SY954;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Thrifty/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Thrifty;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -481,7 +709,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = P3SP5SY954;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = jasunlichee.ThriftyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -501,7 +729,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = P3SP5SY954;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = jasunlichee.ThriftyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -588,6 +816,58 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		085684912C9B6713006209D1 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+		085684992C9BCF22006209D1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		085684922C9B6713006209D1 /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 085684912C9B6713006209D1 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		085684942C9B6713006209D1 /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 085684912C9B6713006209D1 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
+		};
+		0856849A2C9BCF22006209D1 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 085684992C9BCF22006209D1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		0856849C2C9BCF22006209D1 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 085684992C9BCF22006209D1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		085684A72C9BE010006209D1 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 085684992C9BCF22006209D1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		087678372C9F6CF3004E219D /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 085684992C9BCF22006209D1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 086762A22C8FBF78007D5074 /* Project object */;
 }
