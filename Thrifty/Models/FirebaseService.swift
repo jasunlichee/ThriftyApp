@@ -20,12 +20,14 @@ class FirebaseService: ObservableObject {
     }
 
     func checkAuthenticationStatus() {
+        isLoading = true
         if let userID = Auth.auth().currentUser?.uid {
             loadUserData(userID: userID)
+            
             print("Pulled data")
         } else {
             print("Not logged in")
-            loggedIn = false;
+            loggedIn = false
             isLoading = false
         }
     }
@@ -38,6 +40,11 @@ class FirebaseService: ObservableObject {
                     let userData = try document.data(as: ThriftyUser.self)
                     self.currentUser = userData
                     self.loggedIn = true
+                    if(!self.isSameMonthAndYear(as: self.currentUser.months[0].startDate)){
+                        self.addCurrentMonth(userID: self.currentUser.id)
+                    }
+                    
+                    
                     self.isLoading = false;
                     print("User data loaded: \(userData)")
                 } catch {
@@ -97,26 +104,8 @@ class FirebaseService: ObservableObject {
     
     
     func saveMonthToFirestore(userID: String, month: Month) {
-        let db = Firestore.firestore()
-        let userRef = db.collection("users").document(userID)
-
-        do {
-            // Convert the `Month` struct to a dictionary using Codable
-            let encodedMonth = try Firestore.Encoder().encode(month)
-            
-            // Save the month to Firestore under the user's document
-            userRef.setData([
-                "months": FieldValue.arrayUnion([encodedMonth])
-            ], merge: true) { error in
-                if let error = error {
-                    print("Error saving month: \(error.localizedDescription)")
-                } else {
-                    print("Month data successfully saved.")
-                }
-            }
-        } catch let error {
-            print("Error encoding month: \(error.localizedDescription)")
-        }
+        currentUser.months.insert(month, at: 0)
+        saveData()
     }
     
     func updateBillingCycle(userID: String, newBillingCycle: Date) {
@@ -153,6 +142,16 @@ class FirebaseService: ObservableObject {
         print(userID)
         print("Adding current month")
         saveMonthToFirestore(userID: userID, month: newMonth)
+    }
+    
+    
+    func isSameMonthAndYear(as inputDate: Date) -> Bool {
+        let calendar = Calendar.current
+        let today = Date()
+        let currentComponents = calendar.dateComponents([.year, .month], from: today)
+        let givenComponents = calendar.dateComponents([.year, .month], from: inputDate)
+
+        return currentComponents.year == givenComponents.year && currentComponents.month == givenComponents.month
     }
     
 }

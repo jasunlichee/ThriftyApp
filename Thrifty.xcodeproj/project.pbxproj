@@ -57,6 +57,9 @@
 		08925F202CDCBB0800874445 /* BudgetSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08925F1F2CDCBB0800874445 /* BudgetSetting.swift */; };
 		08925F222CDD748500874445 /* BudgetCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08925F212CDD748500874445 /* BudgetCard.swift */; };
 		08925F262CDEA91200874445 /* ObservableMonth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08925F252CDEA91200874445 /* ObservableMonth.swift */; };
+		08925F282CE2F7E400874445 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08925F272CE2F7E400874445 /* NotificationManager.swift */; };
+		08925F2A2CE344AB00874445 /* SetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08925F292CE344AB00874445 /* SetupView.swift */; };
+		08925F2C2CE368E800874445 /* EmptyPurchaseArc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08925F2B2CE368E800874445 /* EmptyPurchaseArc.swift */; };
 		08C13CB52CD2BB3C00663FCD /* SignInVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C13CB42CD2BB3C00663FCD /* SignInVM.swift */; };
 /* End PBXBuildFile section */
 
@@ -126,6 +129,9 @@
 		08925F1F2CDCBB0800874445 /* BudgetSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetSetting.swift; sourceTree = "<group>"; };
 		08925F212CDD748500874445 /* BudgetCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetCard.swift; sourceTree = "<group>"; };
 		08925F252CDEA91200874445 /* ObservableMonth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableMonth.swift; sourceTree = "<group>"; };
+		08925F272CE2F7E400874445 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		08925F292CE344AB00874445 /* SetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupView.swift; sourceTree = "<group>"; };
+		08925F2B2CE368E800874445 /* EmptyPurchaseArc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyPurchaseArc.swift; sourceTree = "<group>"; };
 		08C13CB42CD2BB3C00663FCD /* SignInVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -245,6 +251,7 @@
 				08328BC12CCC728700676945 /* ProfileVM.swift */,
 				08C13CB42CD2BB3C00663FCD /* SignInVM.swift */,
 				08925F252CDEA91200874445 /* ObservableMonth.swift */,
+				08925F272CE2F7E400874445 /* NotificationManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -259,8 +266,10 @@
 				08925F0E2CD9A1ED00874445 /* LoadingView.swift */,
 				086763092C93F0D8007D5074 /* ProfileView.swift */,
 				086762E52C8FCF2F007D5074 /* DetailView.swift */,
+				08925F292CE344AB00874445 /* SetupView.swift */,
 				086762F72C903B47007D5074 /* MonthlyHeaderView.swift */,
 				086763182C950A70007D5074 /* PurchaseArc.swift */,
+				08925F2B2CE368E800874445 /* EmptyPurchaseArc.swift */,
 				086762EB2C8FED42007D5074 /* RingView.swift */,
 				086762F92C903F45007D5074 /* SummaryView.swift */,
 				086762E72C8FCF4C007D5074 /* NewPurchaseSheet.swift */,
@@ -443,8 +452,10 @@
 				086762FA2C903F45007D5074 /* SummaryView.swift in Sources */,
 				086762D82C8FBFD0007D5074 /* MonthlyView.swift in Sources */,
 				086762E62C8FCF2F007D5074 /* DetailView.swift in Sources */,
+				08925F2C2CE368E800874445 /* EmptyPurchaseArc.swift in Sources */,
 				08925F0F2CD9A1ED00874445 /* LoadingView.swift in Sources */,
 				08925F172CDC2DA100874445 /* SettingsCard.swift in Sources */,
+				08925F282CE2F7E400874445 /* NotificationManager.swift in Sources */,
 				086762EA2C8FD0A6007D5074 /* PurchaseCard.swift in Sources */,
 				08925F262CDEA91200874445 /* ObservableMonth.swift in Sources */,
 				08925F202CDCBB0800874445 /* BudgetSetting.swift in Sources */,
@@ -476,6 +487,7 @@
 				085684A32C9BDDAD006209D1 /* GoogleVM.swift in Sources */,
 				085684B02C9E8684006209D1 /* AuthManager.swift in Sources */,
 				087678312C9EA370004E219D /* AppleVM.swift in Sources */,
+				08925F2A2CE344AB00874445 /* SetupView.swift in Sources */,
 				08925F222CDD748500874445 /* BudgetCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

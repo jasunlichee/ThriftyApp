@@ -30,16 +30,6 @@ struct ThriftyApp: App {
     
     @State private var isLoading = true
     
-    
-    func isSameMonthAndYear(as inputDate: Date) -> Bool {
-        let calendar = Calendar.current
-        let today = Date()
-        let currentComponents = calendar.dateComponents([.year, .month], from: today)
-        let givenComponents = calendar.dateComponents([.year, .month], from: inputDate)
-
-        return currentComponents.year == givenComponents.year && currentComponents.month == givenComponents.month
-    }
-    
     var body: some Scene {
         WindowGroup {
             if firestoreManager.isLoading {
@@ -70,7 +60,7 @@ struct ThriftyApp: App {
                         self.selection = 2
                     }
                     
-                    ProfileView(loggedIn: $loggedIn, billingCycle: $firestoreManager.currentUser.billingCycle)
+                    ProfileView(loggedIn: $loggedIn, billingCycle: $firestoreManager.currentUser.billingCycle, isLoading: $isLoading)
                     .environmentObject(firestoreManager)
                     .environmentObject(googleVM)
                     .environmentObject(appleVM)
@@ -85,13 +75,15 @@ struct ThriftyApp: App {
                 }
                 .onAppear(perform: {
                     selection = 1
-                    firestoreManager.checkAuthenticationStatus()
                 })
             } else {
                 LoginView(loggedIn: $loggedIn)
                     .environmentObject(googleVM)
                     .environmentObject(appleVM)
                     .environmentObject(firestoreManager)
+                    .onDisappear{
+                        firestoreManager.checkAuthenticationStatus()
+                    }
 
                 
             }

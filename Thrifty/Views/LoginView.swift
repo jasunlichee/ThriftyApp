@@ -57,6 +57,7 @@ struct LoginView: View {
                             let success = await viewModel.signIn()
                             if(success){
                                 firestoreManager.loggedIn = true
+                                firestoreManager.checkAuthenticationStatus()
                             }
                         }
                     }){
@@ -81,6 +82,9 @@ struct LoginView: View {
                 
                 Button(action: {
                     googleVM.signInWithGoogle()
+                    if(googleVM.isGoogleLogin){
+                        firestoreManager.checkAuthenticationStatus()
+                    }
                     
                 }){
                     HStack {
@@ -115,6 +119,7 @@ struct LoginView: View {
                     switch result {
                     case.success(let authorization):
                         loginWithFirebase(authorization)
+                        firestoreManager.checkAuthenticationStatus()
                         
                     case.failure(let error):
                         print(error)
@@ -145,6 +150,7 @@ struct LoginView: View {
             }
             .padding()
         }
+        
         .padding(.horizontal)
         .sheet(isPresented: $isCreatingNewAccount) {
             SignUpView(isPresenting: $isCreatingNewAccount)

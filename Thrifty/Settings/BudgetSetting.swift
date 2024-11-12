@@ -27,7 +27,7 @@ struct BudgetSetting: View {
             BudgetCard(budget: $budget, tempbudget: $tempbudget)
                 .frame(maxWidth: 300)
                 .padding()
-                .shadow(radius: 4)
+                .shadow(radius: 2)
             
             Button(action: {
                 budget = tempbudget

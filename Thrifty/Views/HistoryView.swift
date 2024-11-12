@@ -19,11 +19,11 @@ struct HistoryView: View {
                     .font(.largeTitle)
                 List{
                     Section(header: Text("Months")){
-                        if(months.isEmpty){
+                        if(months.count == 1){
                             Label("No History", systemImage: "calendar.badge.exclamationmark")
                         }
                         
-                        ForEach(months.indices.sorted(by: { sortingFunction(option: sortOption, m1: months[$0], m2: months[$1]) }), id: \.self) { index in
+                        ForEach(months.indices.dropFirst().sorted(by: { sortingFunction(option: sortOption, m1: months[$0], m2: months[$1]) }), id: \.self) { index in
                             NavigationLink(destination: HistoryPurchaseView(month: months[index])) {
                                 MonthCard(purchases: $months[index].purchases, month: $months[index])
                             }

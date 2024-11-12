@@ -13,6 +13,7 @@ import FirebaseAuth
 struct ProfileView: View {
     @Binding var loggedIn: Bool
     @Binding var billingCycle: Date
+    @Binding var isLoading: Bool
     @EnvironmentObject var googleVM: GoogleVM
     @EnvironmentObject var appleVM: AppleVM
     @StateObject private var vm = ProfileVM()
@@ -78,6 +79,7 @@ struct ProfileView: View {
                                     print(error)
                                 }
                             }
+                            isLoading = true
                             firestoreManager.loggedIn = false
                         }){
                             Text("Sign Out of Your Account")
@@ -113,6 +115,6 @@ struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
         let gPreview = GoogleVM()
         let firePreview = FirebaseService()
-        ProfileView(loggedIn: .constant(false), billingCycle: .constant(Date())).environmentObject(gPreview).environmentObject(firePreview)
+        ProfileView(loggedIn: .constant(false), billingCycle: .constant(Date()), isLoading:.constant(true)).environmentObject(gPreview).environmentObject(firePreview)
     }
 }

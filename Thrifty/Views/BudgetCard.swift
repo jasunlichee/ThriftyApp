@@ -13,7 +13,7 @@ struct BudgetCard: View {
     var body: some View {
         VStack {
             HStack{
-                Text("Current Budget")
+                Text("Budget")
                     .font(.headline)
                     .padding()
                     .frame(maxWidth: .infinity, alignment: .leading)
@@ -45,7 +45,8 @@ struct BudgetCard: View {
                         .keyboardType(.numberPad)
                         .background(.white)
                         .padding()
-                        .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/)
+                        .frame(maxWidth: 200)
+                        .multilineTextAlignment(.center)
                 }
                 Button(action: {
                     tempbudget += 50.0

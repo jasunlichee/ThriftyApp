@@ -39,54 +39,63 @@ struct RingView: View {
     var body: some View {
         GeometryReader { geometry in
             ZStack {
-                ForEach(Purchase.categories.reversed(), id: \.self) { category in
-                    PurchaseArc(category: category, month: month)
+                
+                if(purchases.isEmpty){
+                    EmptyPurchaseArc()
                         .rotation(Angle(degrees: -90))
                         .stroke(style: StrokeStyle(lineWidth: 40))
                         .foregroundColor(
-                            selectedCategory == category ?
-                            
-                            Purchase.theme(for: category).mainColor.opacity(0.8)
-                            :Purchase.theme(for: category).mainColor
-                        
+                            Theme.seafoam.mainColor
                         )
-                        .gesture(
-                            LongPressGesture(minimumDuration: 0.2)
-                            .onEnded { _ in
-                                isPressing = true
-                                selectedCategory = category
-                            }
-                            .simultaneously(with: DragGesture(minimumDistance: 0)
-                                .onChanged{value in
-                                    fingerPosition = value.location
-                                    if !isFingerWithinRing(geometry: geometry) {
+                } else {
+                    ForEach(Purchase.categories.reversed(), id: \.self) { category in
+                        PurchaseArc(category: category, month: month)
+                            .rotation(Angle(degrees: -90))
+                            .stroke(style: StrokeStyle(lineWidth: 40))
+                            .foregroundColor(
+                                selectedCategory == category ?
+                                
+                                Purchase.theme(for: category).mainColor.opacity(0.8)
+                                :Purchase.theme(for: category).mainColor
+                            
+                            )
+                            .gesture(
+                                LongPressGesture(minimumDuration: 0.2)
+                                .onEnded { _ in
+                                    isPressing = true
+                                    selectedCategory = category
+                                }
+                                .simultaneously(with: DragGesture(minimumDistance: 0)
+                                    .onChanged{value in
+                                        fingerPosition = value.location
+                                        if !isFingerWithinRing(geometry: geometry) {
+                                            selectedCategory = nil
+                                        }
+                                    }
+                                    .onEnded { _ in
+                                        isPressing = false
                                         selectedCategory = nil
                                     }
-                                }
-                                .onEnded { _ in
-                                    isPressing = false
-                                    selectedCategory = nil
-                                }
+                                )
                             )
-                        )
-                }
-                
-                if isPressing, let category = selectedCategory {
-                    VStack {
-                        Text("\(category): $\(Purchase.toString(for: Month.categorySpent(for: category, in: month)))")
-                            .padding(8)
-                            .background(Color.white)
-                            .cornerRadius(10)
-                            .shadow(radius: 5)
-                            .transition(.scale)
-                        
-                        Spacer()
                     }
-                    .position(x: fingerPosition.x, y: fingerPosition.y + geometry.size.height / 2 - 50)
-                    .animation(.easeInOut(duration: 0.3), value: isPressing)
-                }
+                    
+                    if isPressing, let category = selectedCategory {
+                        VStack {
+                            Text("\(category): $\(Purchase.toString(for: Month.categorySpent(for: category, in: month)))")
+                                .padding(8)
+                                .background(Color.white)
+                                .cornerRadius(10)
+                                .shadow(radius: 5)
+                                .transition(.scale)
+                            
+                            Spacer()
+                        }
+                        .position(x: fingerPosition.x, y: fingerPosition.y + geometry.size.height / 2 - 50)
+                        .animation(.easeInOut(duration: 0.3), value: isPressing)
+                    }
 
-                
+                }
             }
             .padding(.horizontal)
             .frame(width: 350, height: geometry.size.height)
