@@ -30,10 +30,11 @@ struct DetailView: View {
                     
                     ForEach(sortedPurchases) { purchase in
                         if filteredCategory == "All" || filteredCategory == purchase.category {
-                            NavigationLink(destination: PurchaseEditSheet(purchase: $purchases[purchases.firstIndex(where: { $0.id == purchase.id })!])) {
+                            
+                            //NavigationLink(destination: PurchaseEditSheet(purchase: $purchases[purchases.firstIndex(where: { $0.id == purchase.id })!])) {
                                 PurchaseCard(purchase: purchase)
                                     .foregroundColor(.black)
-                            }
+                            //}
                             .listRowBackground(purchase.theme.mainColor)
                             .listRowInsets(EdgeInsets(top: 0, leading: 5, bottom: 0, trailing: 15))
                         }

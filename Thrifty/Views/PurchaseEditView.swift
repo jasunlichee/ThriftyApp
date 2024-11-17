@@ -26,7 +26,7 @@ struct PurchaseEditView: View {
             Section(header: Text("Purchase Info")){
                 TextField("Item Purchased", text: $purchase.name)
                 TextField("Amount", value: $purchase.cost, format: .currency(code: "USD"))
-                    .keyboardType(.numberPad)
+                    .keyboardType(.decimalPad)
                 DatePicker(
                         "Start Date",
                         selection: $purchase.date,
@@ -49,6 +49,7 @@ struct PurchaseEditView: View {
                                 .foregroundColor(.black)
                         }
                         .buttonStyle(BorderlessButtonStyle())
+                        .shadow(color: purchase.category == category ? Color.blue.opacity(0.7) : Color.clear, radius: 10, x: 0, y: 4)
                     }
                 }
 

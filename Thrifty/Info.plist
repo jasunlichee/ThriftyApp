@@ -15,5 +15,7 @@
 	</array>
 	<key>GIDClientID</key>
 	<string>jasunlichee.Thrifty</string>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
 </dict>
 </plist>

@@ -119,8 +119,6 @@ struct LoginView: View {
                     switch result {
                     case.success(let authorization):
                         loginWithFirebase(authorization)
-                        firestoreManager.checkAuthenticationStatus()
-                        
                     case.failure(let error):
                         print(error)
                         
@@ -180,7 +178,7 @@ struct LoginView: View {
                   print(error.localizedDescription)
                   return
                 }
-                  firestoreManager.loggedIn = true
+                  firestoreManager.checkAuthenticationStatus()
                 print("Logged in")
               }
             }
