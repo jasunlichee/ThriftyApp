@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+
 struct PurchaseEditView: View {
     @Binding var purchase: Purchase
     
@@ -18,6 +19,9 @@ struct PurchaseEditView: View {
     ]
 
     var body: some View {
+        let calendar = Calendar.current
+        let startOfMonth = calendar.date(from: calendar.dateComponents([.year, .month], from: Date()))!
+        let endOfMonth = calendar.date(byAdding: DateComponents(month: 1, day: -1), to: startOfMonth)!
         Form {
             Section(header: Text("Purchase Info")){
                 TextField("Item Purchased", text: $purchase.name)
@@ -26,6 +30,7 @@ struct PurchaseEditView: View {
                 DatePicker(
                         "Start Date",
                         selection: $purchase.date,
+                        in: startOfMonth...endOfMonth,
                         displayedComponents: [.date]
                     )
 

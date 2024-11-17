@@ -13,7 +13,7 @@ struct BudgetCard: View {
     var body: some View {
         VStack {
             HStack{
-                Text("Budget")
+                Text("Current:")
                     .font(.headline)
                     .padding()
                     .frame(maxWidth: .infinity, alignment: .leading)

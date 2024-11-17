@@ -13,6 +13,8 @@ struct DetailView: View {
     @State private var filteredCategory: String = "All"
     @State private var sortOption: SortOption = .dateDescending
     
+    @EnvironmentObject var firestoreManager: FirebaseService
+    
     let categories = Purchase.categories
     
     var body: some View {
@@ -43,6 +45,8 @@ struct DetailView: View {
                                 purchases.remove(at: indexInArray)
                             }
                         }
+                        
+                        firestoreManager.saveData()
                     })
                     
                 }
@@ -126,6 +130,10 @@ struct DetailView: View {
 
 
 
-#Preview {
-    DetailView(purchases: .constant(Purchase.sampleData1))
+struct DetailView_Previews: PreviewProvider {
+    
+    static var previews: some View {
+        let firePreview = FirebaseService()
+        DetailView(purchases: .constant(Purchase.sampleData1)).environmentObject(firePreview)
+    }
 }

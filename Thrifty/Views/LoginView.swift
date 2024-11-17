@@ -149,6 +149,9 @@ struct LoginView: View {
                 
             }
             .padding()
+            .alert(isPresented: $viewModel.showError) {
+                Alert(title: Text("Error"), message: Text(viewModel.errorMessage), dismissButton: .default(Text("OK")))
+            }
         }
         
         .padding(.horizontal)

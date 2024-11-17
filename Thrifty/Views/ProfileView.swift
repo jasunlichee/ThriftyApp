@@ -53,7 +53,7 @@ struct ProfileView: View {
                     }
                     
                     Section(header: Text("App Settings")){
-                        NavigationLink(destination: TestView()) {
+                        NavigationLink(destination: NotificationSetting()) {
                             SettingsCard(name: "Notifications", bg: bg, icon: "bell.badge")
                         }
                         .foregroundColor(.black)

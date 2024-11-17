@@ -12,11 +12,14 @@ final class SignInViewModel: ObservableObject {
     
     @Published var email = ""
     @Published var password = ""
+    @Published var errorMessage: String = ""
+    @Published var showError = false
     
     
     func signUp() async -> Bool{
         guard !email.isEmpty, !password.isEmpty else {
-            print("No email or password found.")
+            errorMessage = "No email or password found."
+            showError = true
             return false
         }
         do {
@@ -25,14 +28,16 @@ final class SignInViewModel: ObservableObject {
             print(returnedUserData)
             return true
         } catch {
-            print("Error: \(error)")
+            errorMessage = "Invalid email or password."
+            showError = true
             return false
         }
     }
     
     func signIn() async -> Bool{
         guard !email.isEmpty, !password.isEmpty else {
-            print("No email or password found.")
+            errorMessage = "No email or password found."
+            showError = true
             return false
         }
         do {
@@ -41,7 +46,8 @@ final class SignInViewModel: ObservableObject {
             print(returnedUserData)
             return true
         } catch {
-            print("Error: \(error)")
+            errorMessage = "Invalid email or password."
+            showError = true
             return false
         }
     }

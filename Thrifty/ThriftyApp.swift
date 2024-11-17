@@ -74,6 +74,7 @@ struct ThriftyApp: App {
                     }
                 }
                 .onAppear(perform: {
+                    firestoreManager.checkBillingMonth()
                     selection = 1
                 })
             } else {
@@ -83,6 +84,7 @@ struct ThriftyApp: App {
                     .environmentObject(firestoreManager)
                     .onDisappear{
                         firestoreManager.checkAuthenticationStatus()
+                        print("Init")
                     }
 
                 
@@ -95,8 +97,8 @@ struct ThriftyApp: App {
 class AppDelegate: NSObject, UIApplicationDelegate {
   func application(_ application: UIApplication,
                    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-    FirebaseApp.configure()
-
+      FirebaseApp.configure()
+      NotificationsManager.shared.requestPermission()
     return true
   }
 }
