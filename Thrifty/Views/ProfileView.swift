@@ -16,7 +16,7 @@ struct ProfileView: View {
     @Binding var isLoading: Bool
     @EnvironmentObject var googleVM: GoogleVM
     @EnvironmentObject var appleVM: AppleVM
-    @StateObject private var vm = ProfileVM()
+    @StateObject var vm = ProfileVM()
     @EnvironmentObject var firestoreManager: FirebaseService
     
     var bg: Color = Theme.seafoam.mainColor
@@ -30,7 +30,7 @@ struct ProfileView: View {
                 
                 List {
                     Section(header: Text("Account Settings")){
-                        NavigationLink(destination: ProfileSetting(vm: vm)) {
+                        NavigationLink(destination: ProfileSetting(isLoading: $isLoading)) {
                             SettingsCard(name: "Profile", bg: bg, icon: "person.circle")
                         }
                         .foregroundColor(.black)

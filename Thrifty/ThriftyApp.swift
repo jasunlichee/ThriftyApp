@@ -34,7 +34,7 @@ struct ThriftyApp: App {
         WindowGroup {
             if firestoreManager.isLoading {
                 LoadingView()
-            } else if firestoreManager.loggedIn || googleVM.isGoogleLogin{
+            } else if firestoreManager.loggedIn{
                 
                 //$firestoreManager.currentUser.months
                 
@@ -83,7 +83,7 @@ struct ThriftyApp: App {
                     .environmentObject(appleVM)
                     .environmentObject(firestoreManager)
                     .onDisappear{
-                        firestoreManager.checkAuthenticationStatus()
+                        //firestoreManager.checkAuthenticationStatus()
                         print("Init")
                     }
 

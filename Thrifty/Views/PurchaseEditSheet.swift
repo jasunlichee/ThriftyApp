@@ -10,17 +10,19 @@ import SwiftUI
 struct PurchaseEditSheet: View {
     @Binding var purchase: Purchase
     @State var editingPurchase: Purchase
+    @State var editingAmount: Double?
     @Environment(\.dismiss) var dismiss
     
     init(purchase: Binding<Purchase>) {
         self._purchase = purchase
         _editingPurchase = State(initialValue: purchase.wrappedValue)
+        editingAmount = editingPurchase.cost
     }
     
     var body: some View {
         NavigationStack {
-            PurchaseEditView(purchase: $editingPurchase)
-                .toolbar {                    
+            PurchaseEditView(purchase: $editingPurchase, amount: $editingAmount)
+                .toolbar {
                     ToolbarItem(placement: .confirmationAction){
                         Button("Done"){
                             purchase = editingPurchase

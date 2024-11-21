@@ -12,11 +12,13 @@ struct NewPurchaseSheet: View {
     @State private var newPurchase = Purchase.emptyPurchase
     @Binding var purchases: [Purchase]
     @Binding var isPresenting: Bool
+    @State var amount: Double?
+    
     @EnvironmentObject var firestoreManager: FirebaseService
     
     var body: some View {
         NavigationStack{
-            PurchaseEditView(purchase: $newPurchase)
+            PurchaseEditView(purchase: $newPurchase, amount: $amount)
                 .toolbar {
                     ToolbarItem(placement: .cancellationAction){
                         Button("Cancel"){
@@ -25,13 +27,14 @@ struct NewPurchaseSheet: View {
                     }
                     ToolbarItem(placement: .confirmationAction){
                         Button("Add"){
+                            newPurchase.cost = amount ?? 0.0
                             purchases.append(newPurchase)
                             firestoreManager.saveData()
                             isPresenting = false
                             
                         }
                         .disabled(newPurchase.name == "" ||
-                                  newPurchase.cost <= 0 ||
+                                  amount == nil ||
                                   newPurchase.theme == Theme.porange)
                     }
                 }

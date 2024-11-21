@@ -11,19 +11,7 @@ import GoogleSignIn
 import AuthenticationServices
 import CryptoKit
 
-struct SignInWithAppleButtonViewRepresentable: UIViewRepresentable {
-    
-    let type: ASAuthorizationAppleIDButton.ButtonType
-    let style: ASAuthorizationAppleIDButton.Style
-    
-    func makeUIView(context: Context) -> ASAuthorizationAppleIDButton {
-        return ASAuthorizationAppleIDButton(authorizationButtonType: type, authorizationButtonStyle: style)
-    }
-    
-    func updateUIView(_ uiView: ASAuthorizationAppleIDButton, context: Context) {
-        
-    }
-}
+
 
 
 struct LoginView: View {
@@ -81,9 +69,14 @@ struct LoginView: View {
                 
                 
                 Button(action: {
-                    googleVM.signInWithGoogle()
-                    if(googleVM.isGoogleLogin){
-                        firestoreManager.checkAuthenticationStatus()
+                    Task {
+                        do {
+                            try await firestoreManager.signInWithGoogle()
+                            firestoreManager.checkAuthenticationStatus()
+                            print("Google sign-in successful")
+                        } catch {
+                            print("Error during Google sign-in: \(error.localizedDescription)")
+                        }
                     }
                     
                 }){

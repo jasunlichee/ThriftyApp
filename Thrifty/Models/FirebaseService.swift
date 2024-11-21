@@ -6,14 +6,21 @@
 //
 
 import Foundation
+import Firebase
 import FirebaseFirestoreInternal
 import FirebaseFirestore
 import FirebaseAuth
+import FirebaseCore
+import GoogleSignIn
+import AuthenticationServices
+import CryptoKit
 
+@MainActor
 class FirebaseService: ObservableObject {
     @Published var currentUser: ThriftyUser = ThriftyUser.sampleUser
     @Published var loggedIn: Bool = false
     @Published var isLoading: Bool = true
+    //@Published var appleVM: AppleVM
         
     init() {
         checkAuthenticationStatus()
@@ -62,6 +69,112 @@ class FirebaseService: ObservableObject {
         }
     }
     
+    func reauthenticateWithEmailPassword(email: String, password: String) async throws {
+        guard let user = Auth.auth().currentUser else {
+            throw NSError(domain: "FirebaseAuthError", code: -1, userInfo: [NSLocalizedDescriptionKey: "No authenticated user found."])
+        }
+        
+        let credential = EmailAuthProvider.credential(withEmail: email, password: password)
+        
+
+        try await user.reauthenticate(with: credential)
+        print("Reauthentication successful with email/password.")
+    }
+
+    
+    func reauthenticateWithGoogle() async throws{
+        guard let clientID = FirebaseApp.app()?.options.clientID else { return }
+        
+        guard let user = Auth.auth().currentUser else {
+            throw NSError(domain: "FirebaseAuthError", code: -1, userInfo: [NSLocalizedDescriptionKey: "No authenticated user found."])
+        }
+        
+        let previousEmail = currentUser.email
+        
+        let config = GIDConfiguration(clientID: clientID)
+        GIDSignIn.sharedInstance.configuration = config
+        
+        
+        let userAuth = try await GIDSignIn.sharedInstance.signIn(withPresenting: ApplicationUtility.rootViewController)
+        
+        let googleUser = userAuth.user
+        
+        guard let idToken = googleUser.idToken?.tokenString,
+            let googleEmail = googleUser.profile?.email else {
+            throw NSError(domain: "GoogleSignInError", code: -1, userInfo: [NSLocalizedDescriptionKey: "Failed to retrieve Google user information"])
+        }
+        
+        if googleEmail != previousEmail {
+            throw NSError(domain: "GoogleSignInError", code: -1, userInfo: [NSLocalizedDescriptionKey: "The account you selected does not match the currently logged-in user."])
+        }
+        
+        let accessToken = googleUser.accessToken.tokenString
+        let credential = GoogleAuthProvider.credential(withIDToken: idToken, accessToken: accessToken)
+        
+        
+        try await user.reauthenticate(with: credential)
+    }
+    
+    func signInWithGoogle() async throws {
+        guard let clientID = FirebaseApp.app()?.options.clientID else { return }
+        
+        let config = GIDConfiguration(clientID: clientID)
+        GIDSignIn.sharedInstance.configuration = config
+        
+        let userAuth = try await GIDSignIn.sharedInstance.signIn(withPresenting: ApplicationUtility.rootViewController)
+        
+        let googleUser = userAuth.user
+        
+        guard let idToken = googleUser.idToken?.tokenString
+            else {
+            throw NSError(domain: "GoogleSignInError", code: -1, userInfo: [NSLocalizedDescriptionKey: "Failed to retrieve Google user information"])
+        }
+        
+        let accessToken = googleUser.accessToken
+        
+        let credential = GoogleAuthProvider.credential(withIDToken: idToken, accessToken: accessToken.tokenString)
+        
+        try await withCheckedThrowingContinuation { (continuation: CheckedContinuation<Void, Error>) in
+            Auth.auth().signIn(with: credential) { authResult, error in
+                if let error = error {
+                    continuation.resume(throwing: error) // Resumes with the error if it occurs
+                } else {
+                    continuation.resume() // Resumes successfully when sign-in is successful
+                }
+            }
+        }
+        
+    }
+    
+    func signOutWithGoogle() {
+        do {
+            try Auth.auth().signOut()
+            GIDSignIn.sharedInstance.signOut()
+            self.loggedIn = false
+        } catch let signOutError as NSError {
+            print("Error signing out: \(signOutError.localizedDescription)")
+        }
+    }
+    
+    func deleteData() async throws {
+        let db = Firestore.firestore()
+        let userRef = db.collection("users").document(currentUser.id)
+        
+        try await userRef.delete()
+    }
+    
+    func deleteAccount() async throws {
+        guard let user = Auth.auth().currentUser else {
+            throw URLError(.badURL)
+        }
+        
+        try await user.delete()
+    }
+    
+    func logOut() throws {
+        try AuthenticationManager.shared.signOut()
+    }
+
     func createNewUserData(userID: String, email: String, billingCycle: Date) {
         let calendar = Calendar.current
         let currentDate = Date()

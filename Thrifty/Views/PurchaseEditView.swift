@@ -10,6 +10,7 @@ import SwiftUI
 
 struct PurchaseEditView: View {
     @Binding var purchase: Purchase
+    @Binding var amount: Double?
     
     let categories = Purchase.categories
     
@@ -25,7 +26,7 @@ struct PurchaseEditView: View {
         Form {
             Section(header: Text("Purchase Info")){
                 TextField("Item Purchased", text: $purchase.name)
-                TextField("Amount", value: $purchase.cost, format: .currency(code: "USD"))
+                TextField("Amount", value: $amount, format: .currency(code: "USD"))
                     .keyboardType(.decimalPad)
                 DatePicker(
                         "Start Date",
@@ -56,11 +57,10 @@ struct PurchaseEditView: View {
             }
             
         }
-
     }
 }
 
 #Preview {
     
-    PurchaseEditView(purchase: .constant(Purchase.emptyPurchase))
+    PurchaseEditView(purchase: .constant(Purchase.emptyPurchase), amount: .constant(nil))
 }

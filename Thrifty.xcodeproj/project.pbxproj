@@ -21,6 +21,8 @@
 		085684AE2C9CA68F006209D1 /* client.plist in Resources */ = {isa = PBXBuildFile; fileRef = 085684AD2C9CA68F006209D1 /* client.plist */; };
 		085684B02C9E8684006209D1 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085684AF2C9E8684006209D1 /* AuthManager.swift */; };
 		085684B22C9E918C006209D1 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085684B12C9E918C006209D1 /* SignUpView.swift */; };
+		085A66482CEF3E11000C2256 /* DeleteSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085A66472CEF3E11000C2256 /* DeleteSheetView.swift */; };
+		085A664A2CEF4032000C2256 /* DeleteCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085A66492CEF4032000C2256 /* DeleteCard.swift */; };
 		086762AE2C8FBF78007D5074 /* ThriftyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086762AD2C8FBF78007D5074 /* ThriftyApp.swift */; };
 		086762B22C8FBF7A007D5074 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 086762B12C8FBF7A007D5074 /* Assets.xcassets */; };
 		086762B52C8FBF7A007D5074 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 086762B42C8FBF7A007D5074 /* Preview Assets.xcassets */; };
@@ -63,6 +65,7 @@
 		08AE47E52CE6B65B0088E53D /* NotificationSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AE47E42CE6B65B0088E53D /* NotificationSetting.swift */; };
 		08AE47E72CE9C61E0088E53D /* NotificationsCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AE47E62CE9C61E0088E53D /* NotificationsCard.swift */; };
 		08C13CB52CD2BB3C00663FCD /* SignInVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C13CB42CD2BB3C00663FCD /* SignInVM.swift */; };
+		08D97A162CEC31310024F1DB /* DeleteSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D97A152CEC31310024F1DB /* DeleteSheet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +95,8 @@
 		085684AD2C9CA68F006209D1 /* client.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = client.plist; sourceTree = "<group>"; };
 		085684AF2C9E8684006209D1 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		085684B12C9E918C006209D1 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		085A66472CEF3E11000C2256 /* DeleteSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteSheetView.swift; sourceTree = "<group>"; };
+		085A66492CEF4032000C2256 /* DeleteCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteCard.swift; sourceTree = "<group>"; };
 		086762AA2C8FBF78007D5074 /* Thrifty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Thrifty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		086762AD2C8FBF78007D5074 /* ThriftyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThriftyApp.swift; sourceTree = "<group>"; };
 		086762B12C8FBF7A007D5074 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -137,6 +142,7 @@
 		08AE47E42CE6B65B0088E53D /* NotificationSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSetting.swift; sourceTree = "<group>"; };
 		08AE47E62CE9C61E0088E53D /* NotificationsCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsCard.swift; sourceTree = "<group>"; };
 		08C13CB42CD2BB3C00663FCD /* SignInVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVM.swift; sourceTree = "<group>"; };
+		08D97A152CEC31310024F1DB /* DeleteSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteSheet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -303,9 +309,12 @@
 			isa = PBXGroup;
 			children = (
 				08925F192CDC5FDF00874445 /* ProfileSetting.swift */,
+				085A66472CEF3E11000C2256 /* DeleteSheetView.swift */,
+				08D97A152CEC31310024F1DB /* DeleteSheet.swift */,
 				08925F1B2CDC7E4100874445 /* CycleSetting.swift */,
 				08925F1F2CDCBB0800874445 /* BudgetSetting.swift */,
 				08AE47E42CE6B65B0088E53D /* NotificationSetting.swift */,
+				085A66492CEF4032000C2256 /* DeleteCard.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -458,11 +467,13 @@
 				086762FA2C903F45007D5074 /* SummaryView.swift in Sources */,
 				086762D82C8FBFD0007D5074 /* MonthlyView.swift in Sources */,
 				086762E62C8FCF2F007D5074 /* DetailView.swift in Sources */,
+				08D97A162CEC31310024F1DB /* DeleteSheet.swift in Sources */,
 				08925F2C2CE368E800874445 /* EmptyPurchaseArc.swift in Sources */,
 				08925F0F2CD9A1ED00874445 /* LoadingView.swift in Sources */,
 				08925F172CDC2DA100874445 /* SettingsCard.swift in Sources */,
 				08925F282CE2F7E400874445 /* NotificationManager.swift in Sources */,
 				086762EA2C8FD0A6007D5074 /* PurchaseCard.swift in Sources */,
+				085A664A2CEF4032000C2256 /* DeleteCard.swift in Sources */,
 				08925F262CDEA91200874445 /* ObservableMonth.swift in Sources */,
 				08925F202CDCBB0800874445 /* BudgetSetting.swift in Sources */,
 				085684AA2C9BE07E006209D1 /* LoginView.swift in Sources */,
@@ -493,6 +504,7 @@
 				086762DE2C8FC1BF007D5074 /* Purchase.swift in Sources */,
 				085684A32C9BDDAD006209D1 /* GoogleVM.swift in Sources */,
 				085684B02C9E8684006209D1 /* AuthManager.swift in Sources */,
+				085A66482CEF3E11000C2256 /* DeleteSheetView.swift in Sources */,
 				087678312C9EA370004E219D /* AppleVM.swift in Sources */,
 				08AE47E72CE9C61E0088E53D /* NotificationsCard.swift in Sources */,
 				08925F2A2CE344AB00874445 /* SetupView.swift in Sources */,
@@ -678,7 +690,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = jasunlichee.Thrifty;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -716,7 +728,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = jasunlichee.Thrifty;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
